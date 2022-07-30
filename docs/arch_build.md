@@ -32,7 +32,10 @@ directory for the SDK using the following.
     echo 'export PATH=~/pebble-dev/pebble-sdk-4.5-linux64/bin:$PATH' >> ~/.bash_profile
     . ~/.bash_profile
     sudo pacman -Syyu
-    sudo pacman -S python2 python2-pip  python2-gevent sdl dtc pixman git arm-none-eabi-gcc arm-none-eabi-newlib npm
+    sudo pacman -S python2 sdl dtc pixman git arm-none-eabi-gcc arm-none-eabi-newlib npm
+    curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip2.py
+    sudo python2 get-pip2.py
+    paru -S python-gevent
     pip2 install --upgrade pip --user
     pip2 install virtualenv --user
     cd ~/pebble-dev/pebble-sdk-4.5-linux64
